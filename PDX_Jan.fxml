@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pdx.PDX_JanController">
+  <children>
+    <SplitPane dividerPositions="0.24812030075187969" focusTraversable="true" prefHeight="587.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="63.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="574.0" prefWidth="195.0">
+          <children>
+            <TreeView editable="true" prefHeight="648.0" prefWidth="195.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button layoutX="51.0" layoutY="80.0" mnemonicParsing="false" prefWidth="95.00009999999747" text="Request" />
+            <Button layoutX="52.0" layoutY="121.0" mnemonicParsing="false" prefWidth="94.3359375" text="Complete" />
+            <Button layoutX="51.0" layoutY="161.0" mnemonicParsing="false" prefWidth="95.0" text="Add Notes" />
+            <VBox prefHeight="324.0" prefWidth="195.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="261.0">
+              <children>
+                <ListView prefHeight="324.0" prefWidth="195.0" />
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <TabPane prefHeight="585.0" prefWidth="597.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="Room Status">
+                  <content>
+                    <TableView prefHeight="549.0" prefWidth="597.0">
+                      <columns>
+                        <TableColumn prefWidth="75.0" text="Room #" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="87.0" text="Request" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="87.0" text="Time" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="87.0" text="Completed" />
+                        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="263.0" text="Notes" />
+                      </columns>
+                    </TableView>
+                  </content>
+                </Tab>
+                <Tab text="Inventory">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                        <VBox prefHeight="549.0" prefWidth="597.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <children>
+                            <TableView prefHeight="549.0" prefWidth="597.0">
+                              <columns>
+                                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="176.0" text="Item" />
+                                <TableColumn prefWidth="75.0" text="Amount" />
+                              </columns>
+                            </TableView>
+                          </children>
+                        </VBox>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER" layoutX="566.0" layoutY="23.0" spacing="5.0">
+      <children>
+        <Button id="new_btn" fx:id="Home" mnemonicParsing="false" onAction="#home_issue" text="Home" />
+        <Button id="Delete_btn" mnemonicParsing="false" text="Delete" />
+        <Button id="save_btn" mnemonicParsing="false" text="Save" />
+      </children>
+    </HBox>
+    <HBox id="HBox" alignment="CENTER" layoutX="26.0" layoutY="25.0" spacing="5.0">
+      <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PARADOX">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Text>
+        <Text opacity="0.64" scaleX="1.0" scaleY="1.3716035208572521" strokeType="OUTSIDE" strokeWidth="0.0" text="LITE" />
+      </children>
+      <effect>
+        <Glow level="0.6312101910828025" />
+      </effect>
+    </HBox>
+    <Text layoutX="383.0" layoutY="39.0" scaleX="4.147656182479971" scaleY="3.973844402578689" strokeType="OUTSIDE" strokeWidth="0.0" text="Janatorial">
+      <font>
+        <Font name="Symbol" size="8.0" />
+      </font>
+    </Text>
+  </children>
+</AnchorPane>

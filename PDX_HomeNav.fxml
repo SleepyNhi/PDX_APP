@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.00019999999495" prefWidth="338.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pdx.PDX_HomeNavController">
+  <children>
+    <VBox prefHeight="483.0" prefWidth="446.0000999999975" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox id="HBox" alignment="CENTER" prefHeight="166.0" prefWidth="339.0" spacing="5.0">
+          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PARADOX">
+              <effect>
+                <Glow level="0.4592356687898089" fx:id="x1">
+                  <input>
+                    <Reflection fraction="0.5753968253968254" topOpacity="0.18253968253968256" />
+                  </input>
+                </Glow>
+              </effect>
+              <font>
+                <Font size="25.0" />
+              </font>
+            </Text>
+            <Text effect="$x1" opacity="0.64" scaleX="1.0" scaleY="1.3716035208572521" strokeType="OUTSIDE" strokeWidth="0.0" text="LITE">
+              <font>
+                <Font size="15.0" />
+              </font>
+            </Text>
+          </children>
+          <effect>
+            <Glow level="0.6312101910828025" />
+          </effect>
+        </HBox>
+        <VBox alignment="TOP_CENTER" prefHeight="311.0" prefWidth="339.0" spacing="25.0">
+          <children>
+            <Button fx:id="Front_Desk" blendMode="SRC_OVER" mnemonicParsing="false" onAction="#FrontDesk_Issue" prefHeight="25.0" prefWidth="125.0" text="Front Desk">
+              <effect>
+                <SepiaTone level="0.08280254777070062" fx:id="x2" />
+              </effect>
+              <font>
+                <Font size="12.0" fx:id="x3" />
+              </font>
+            </Button>
+            <Button fx:id="HR" blendMode="SRC_OVER" effect="$x2" font="$x3" mnemonicParsing="false" onAction="#HR_Issue" prefHeight="25.0" prefWidth="125.0" text="HR" />
+            <Button fx:id="Jan" blendMode="SRC_OVER" effect="$x2" font="$x3" mnemonicParsing="false" onAction="#Jan_Issue" prefHeight="25.0" prefWidth="125.0" text="Janatorial" />
+            <Button fx:id="Rest" blendMode="SRC_OVER" effect="$x2" font="$x3" mnemonicParsing="false" onAction="#Rest_Issue" prefHeight="25.0" prefWidth="125.0" text="Restaurant" />
+            <Button fx:id="Admin" blendMode="SRC_OVER" effect="$x2" font="$x3" mnemonicParsing="false" onAction="#Admin_Issue" prefHeight="25.0" prefWidth="125.0" text="Admin" />
+          </children>
+        </VBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

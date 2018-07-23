@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pdx.FrontDesk_GUIController">
+  <children>
+    <SplitPane dividerPositions="0.24812030075187969" focusTraversable="true" prefHeight="587.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="63.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="574.0" prefWidth="195.0">
+          <children>
+            <Hyperlink layoutX="14.0" layoutY="34.0" text="Add" />
+            <Hyperlink layoutX="13.0" layoutY="56.0" text="Bill Pay" />
+            <Hyperlink layoutX="13.0" layoutY="78.0" text="Search" />
+            <Hyperlink layoutX="14.0" layoutY="100.0" text="Janatorial" />
+            <Hyperlink layoutX="14.0" layoutY="122.0" text="Kitchen" />
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <TabPane prefHeight="585.0" prefWidth="597.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab fx:id="Room_Book" text="Room Book">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                        <TableView prefHeight="549.0" prefWidth="597.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="203.0" text="Room #" fx:id="roomNum" />
+                            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="110.0" text="Availability" fx:id="a_status" />
+                          </columns>
+                        </TableView>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="guestlist" text="Guest List">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                        <ListView fx:id="Guest_List" prefHeight="549.0" prefWidth="597.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="Calendar" text="Calender">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+                <Tab fx:id="Check_IO" text="Check In/Out">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                        <HBox id="HBox" alignment="CENTER" layoutX="371.0" layoutY="3.0" spacing="5.0">
+                          <children>
+                            <TextField prefWidth="121.0" />
+                            <Button mnemonicParsing="false" prefWidth="75.0" text="Search" />
+                          </children>
+                        </HBox>
+                        <TableView prefHeight="549.0" prefWidth="597.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="163.0" text="First Name" fx:id="FD_Table_First_Name" />
+                            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="152.0" text="Last Name" fx:id="FD_Table_Last_Name" />
+                            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="180.0" text="Phone #" fx:id="FD_Table_Phone" />
+                            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="103.0" text="Room #" fx:id="FD_Table_RoomNum" />
+                          </columns>
+                        </TableView>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER" layoutX="566.0" layoutY="23.0" spacing="5.0">
+      <children>
+        <Button id="new_btn" fx:id="home_btn" mnemonicParsing="false" onAction="#home_issue" text="Home" />
+        <Button fx:id="Delete_btn" mnemonicParsing="false" text="Delete" />
+        <Button id="save_btn" fx:id="Save_btn" mnemonicParsing="false" text="Save" />
+      </children>
+    </HBox>
+    <HBox id="HBox" alignment="CENTER" layoutX="26.0" layoutY="25.0" spacing="5.0">
+      <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PARADOX">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Text>
+        <Text opacity="0.64" scaleX="1.0" scaleY="1.3716035208572521" strokeType="OUTSIDE" strokeWidth="0.0" text="LITE" />
+      </children>
+      <effect>
+        <Glow level="0.6312101910828025" />
+      </effect>
+    </HBox>
+    <Text layoutX="365.0" layoutY="35.0" scaleX="4.147656182479971" scaleY="3.973844402578689" strokeType="OUTSIDE" strokeWidth="0.0" text="Front Desk">
+      <font>
+        <Font name="Symbol" size="8.0" />
+      </font>
+    </Text>
+  </children>
+</AnchorPane>
